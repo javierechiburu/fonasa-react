@@ -24,3 +24,11 @@ export const saveUser = (user: User): void => {
     console.error("Error saving user", err);
   }
 };
+
+export const removeUser = (): void => {
+  try {
+    localStorage.removeItem("user");
+  } catch (err) {
+    console.error("Error removing user", err);
+  }
+};
